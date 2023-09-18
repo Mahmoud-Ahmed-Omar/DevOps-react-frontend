@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: docker build -t mahmoud/docker-react -f Dockerfile.Dev .
+      - run: docker build -t mahmoud/docker-react -f /Dockerfile.Dev .
  
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
